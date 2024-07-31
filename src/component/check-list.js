@@ -22,6 +22,7 @@ function CheckList({cookieId}) {
   const addItem = (event) => {
     event.preventDefault();
     if (currentItem.text.trim() !== '') {
+      let newItems;
       if (isEditing) {
         newItems = items.map((item) =>
           item.id === currentItem.id ? { ...item, text: currentItem.text } : item

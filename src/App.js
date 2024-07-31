@@ -3,6 +3,7 @@ import './App.css';
 import CheckList from './component/check-list';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CheckListGrid from './component/check-list-ag-grid';
 
 function App() {
   const [currentCookie, setCurrentCookie] = useState(1);
@@ -17,6 +18,7 @@ function App() {
         <div className="container-md mt-5">
           <Routes>
             <Route path="/" element={<CheckList cookieId={currentCookie} />} />
+            <Route path="/grid" element={<CheckListGrid cookieId={currentCookie}  />} />
           </Routes>
         </div>
       </div>

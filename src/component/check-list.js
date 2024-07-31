@@ -62,6 +62,7 @@ function CheckList({cookieId}) {
         <form onSubmit={ addItem }>
           <input id="app-textbox"
             type="text"
+            maxLength={50}
             placeholder="Enter a check list"
             value={currentItem.text}
             onChange={ handleChange }

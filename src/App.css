@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: white;
 }
 
 .App-logo {
@@ -35,4 +36,129 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.form-content {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+#app-textbox {
+  font-size: 14px;
+  font-weight: 600;
+  width: 35%;
+}
+
+#app-submit {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #04AA6D;
+  min-width: 100px;
+}
+
+#app-submit:hover {
+  background-color: #04AA6D;
+  color: white;
+  min-width: 100px;
+}
+
+#app-button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+  min-width: 100px;
+}
+
+#app-button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+#app-delete {
+  background-color: white; 
+  color: black; 
+  border: 2px solid rgb(240, 165, 165);
+  min-width: 100px;
+}
+
+#app-delete:hover {
+  background-color:rgb(240, 165, 165);
+  color: white;
+  min-width: 100px;
+}
+
+#app-table td{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#app-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#app-table tr:hover {background-color: #ddd;}
+
+#app-table thead {
+  text-align: left;
+  background-color: #008CBA;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+/* #app-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#app-table td, #app-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#app-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#app-table tr:hover {background-color: #ddd;}
+
+#app-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+} */
+
+#app-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }

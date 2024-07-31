@@ -13,9 +13,6 @@ function CheckList({cookieId}) {
     if (savedItems) {
       setItems(JSON.parse(savedItems));
     }
-    else {
-      setItems([]);
-    }
   }, [cookieId]);
 
   const handleChange = (event) => {
@@ -26,22 +23,23 @@ function CheckList({cookieId}) {
     event.preventDefault();
     if (currentItem.text.trim() !== '') {
       if (isEditing) {
-        setItems(
-          items.map((item) =>
-            item.id === currentItem.id ? { ...item, text: currentItem.text } : item
-          )
+        newItems = items.map((item) =>
+          item.id === currentItem.id ? { ...item, text: currentItem.text } : item
         );
         setIsEditing(false);
       } else {
-        setItems(() => [...items, { text: currentItem.text, id: Date.now() }]);
+        newItems = [...items, { text: currentItem.text, id: Date.now() }];
       }
-      Cookies.set('checklistItems'+ cookieId, JSON.stringify(items), { expires: 7 });
+      setItems(newItems);
+      Cookies.set('checklistItems'+ cookieId, JSON.stringify(newItems), { expires: 7 });
       setCurrentItem({ text: '', id: null });
     }
   };
 
   const deleteItem = (id) => {
-    setItems(items.filter((item) => item.id !== id));
+    const newItems = items.filter((item) => item.id !== id);
+    setItems(newItems);
+    Cookies.set('checklistItems'+ cookieId, JSON.stringify(newItems), { expires: 7 });
   };
 
   const editItem = (item) => {

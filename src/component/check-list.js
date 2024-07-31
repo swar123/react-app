@@ -12,6 +12,8 @@ function CheckList({cookieId}) {
     const savedItems = Cookies.get('checklistItems'+ cookieId);
     if (savedItems) {
       setItems(JSON.parse(savedItems));
+    } else {
+      setItems([]);
     }
   }, [cookieId]);
 
